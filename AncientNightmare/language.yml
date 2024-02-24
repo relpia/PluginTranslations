@@ -1,0 +1,197 @@
+# translated by relpia
+
+prefix: '&8[고대의 악몽]'
+
+arena:
+  lobby:
+    play-warden: '&7&8워든&7으로 플레이 합니다.'
+    play-security: '&7&9경비원&7으로 플레이 합니다.'
+    cant-play-warden: '&7누군가 이미 &8워든&7을 선택했습니다.'
+    cant-play-security: '&7누군가 이미 &9경비원&7을 선택했습니다.'
+  countdown:
+    not-enough-players: '&7플레이어가 부족합니다. 카운트다운을 정지합니다.'
+    # {countdown} will be replaced with the remaining amount of seconds of the countdown
+    syntax: '&7게임이 {countdown}초 후에 시작됩니다.'
+  game:
+    not-enough-players: '&7플레이어가 부족해 게임이 시작되지 않았습니다.'
+    start: '&7게임이 시작되었습니다!'
+    warden-start-title: '&f당신은 &8워든&f입니다.'
+    warden-objective: '&7당신은 &8워든&7입니다. &9경비원&7을 처치하세요.'
+    warden-win-chat: '&7게임 종료. &8워든&7이 승리했습니다.'
+    warden-win-title: '&f게임 종료.'
+    warden-win-subtitle: '&8워든&f이 승리했습니다.'
+    security-start-title: '&f당신은 &9경비원&f입니다.'
+    security-objective: '&7당신은 &9경비원&7입니다. &8워든&7에게서 살아남으세요. 탈출하거나 계속 숨어있어야합니다.'
+    security-win-chat: '&7게임 종료. &9경비원&7이 승리했습니다.'
+    security-win-title: '&f게임 종료.'
+    security-win-subtitle: '&9경비원&f이 승리했습니다.'
+    security-death: '&8워든&7이 &9경비원&7을 처치했습니다!' # {battery} will be replaced with the remaining battery in the game
+    battery-boss-bar: '&l배터리: {battery}%'
+    # {timer} will be replaced with the remaining amount of seconds of the timer
+    timer-syntax: '&7게임이 {timer}초 후 종료됩니다.'
+    generator-full: '&7발전기가 완전히 충전되었습니다!'
+    generator-no-battery: '&7발전기를 충전하려면 배터리가 필요합니다! 빨리 찾으세요!'
+    # This is first part of a play again message, this part is not clickable
+    play-again: '&7다시 플레이하고 싶으신가요? 여기를 클릭하세요:'
+    # This is second part of a play again message, this part is clickable and if clicked, player will be teleported to the arena he was just in
+    play-again-clickable: '&8[다시 플레이]'
+
+# {prefix} will be replaced with the prefix of the plugin specified in prefix field
+# {arena} will be replaced with the arena name
+# {arena_state} will be replaced with the arena state
+# {players} will be replaced with the amount of players in the arena
+# {countdown} will be replaced with the remaining amount of seconds of the countdown
+lobby-scoreboard:
+  title: '{prefix}'
+  # Only 16 lines can be seen on a scoreboard, so having more than 16 lines in this field may break the scoreboard.
+  # Lines CAN NOT be repeated! Each line MUST BE unique!
+  lines:
+  - ''
+  - '&8플레이어: &7{players}'
+  - ''
+  - '&8아레나: &7{arena}'
+  - '&8상태: &7{arena_state}'
+  - ''
+  - '&7고대의 악몽'
+
+arena-state:
+  waiting: 대기중
+  countdown: 카운트다운
+  playing: 플레이중
+  ending: 종료중
+
+statistic:
+  wins: 승
+  losses: 패
+  games-played: 게임 플레이 횟수
+  warden-wins: 워든 승리 횟수
+  security-wins: 경비원 승리 횟수
+
+queue:
+  # {position} will be replaced with the current position of the player in queue
+  current-position: '&8당신의 현재 순위: &7{position}'
+
+commands:
+  player:
+    no-permission: '&7이 명령어를 사용할 권한이 없습니다!'
+    no-args:
+    - '&7명령어:'
+    - '&7/an join'
+    - '&7/an leave'
+    - '&7/an stats'
+    - '&7/an queue'
+    - '&7/an admin'
+    # {arena} will be replaced with the name of the arena
+    join: '&7경기장 {arena}에 참여합니다!'
+    join-invalid-usage: '&7사용법: /an join [ArenaName]'
+    join-invalid-specified: '&7You specified an invalid arena!'
+    join-global-lobby-not-set: '&7글로벌 로비가 지정되지 않았습니다, 관리자에게 문의하세요!'
+    join-already-joined: '&7이미 경기장에 참여했습니다!'
+    join-arena-full: '&7경기장이 가득 찼습니다!'
+    join-arena-playing: '&7이미 플레이 중입니다!'
+    join-arena-invalid: '&7경기장이 유효하지 않습니다. 관리자에게 문의하세요!'
+    leave: '&7경기장을 떠났습니다!'
+    leave-invalid-usage: '&7사용법: /an leave'
+    leave-not-joined: '&7경기장에 있지 않습니다!'
+    # {name} will be replaced with the name of player
+    stats-header: '&8{name}s &7전적:'
+    # {statisticName} will be replaced with the name of the statistic,
+    # {statistic} will be replaced with the number/amount of the statistic
+    stats-syntax: '&7{statisticName}: &8{statistic}'
+    stats-invalid-usage: '&7사용법: /an stats [플레이어]'
+    queue-join: '&7대기열에 추가되었습니다!'
+    queue-leave: '&7대기열을 떠났습니다!'
+    queue-already-queued: '&7이미 대기열에 있습니다!'
+  admin:
+    no-permission: '&7이 명령어를 사용할 권한이 없습니다!'
+
+join-gui:
+  title: '&8고대의 악몽'
+  join-item:
+    # {arena} will be replaced with the arena name
+    name: '&7{arena}'
+    # {arena_state} will be replaced with the arena state
+    # {players} will be replaced with the amount of players in the arena
+    lore:
+    - '&7- 현재 상태: &9{arena_state}'
+    - '&7- 플레이어: &9{players}'
+  go-left-item:
+    name: '&9왼쪽'
+  go-right-item:
+    name: '&9오른쪽'
+items:
+  lobby:
+    play-security: '&7[우클릭] &9&l경비원으로 플레이.'
+    play-warden: '&7[우클릭] &8&l워든으로 플레이.'
+    leave: '&7&l떠나기'
+    help-book:
+      name: '&7&l어떻게 플레이 하나요?'
+      # {apostrophe} will be replaced with normal apostrophe (')
+      # {nl} will move the next text on to a new line
+      pages:
+      - 고대의 악몽은 프레디의 피자가게에서 영감을 받은 미니게임입니다. {nl}{nl}고대의 악몽에선 &9경비원 &0또는 &8워든&0으로 플레이
+        할 수 있습니다.
+      - '&8워든&0: {nl}&8워든&0의 목표는 &9경비원&0을 처치하는 것입니다. 하지만 알다시피, &8워든은&0 눈이 없습니다, 그러므로
+        워든은 소리를 활용하여 근처에 있는 &9경비원&0을 찾아내야 합니다. 딱히 큰 문제는 아닙니다, &8워든&0에겐 다양한 능력들이 있거든요!'
+      - '&8워든의 능력&0: {nl}&8음파 공격&0: 음파로 &9경비원&0을 공격하면 &9경비원&0을 느리게 만들고 불안하게 만듭니다.
+        {nl}{nl}&8은신 능력&0: 이 능력을 사용하면 덜 보이게 되며 소리를 내 &9경비원&0을 혼란시킬 수 있습니다.'
+      - '&8분노 능력&0: 당신을 화나게 만들지만... 속도는 훨신 빨라집니다. {nl}{nl}&8환풍구&0: &8워든이&0 환풍구를 기어가는
+        속도는 빠릅니다!'
+      - '&9경비원&0: {nl}&9경비원&0은 한가지 목표만을 가지고 있습니다: 생존. 탈출하거나 철 문을 활용해 계속 버티는 방법이 존재합니다.
+        시끄럽게 행동한다면 당신이 강조되고 &8워든&0이 당신을 볼 수 있게 되기 때문에 조심하세요, 그리고 달리기는 당신을 배고프게 만듭니다.'
+      - '&9경비 능력&0: {nl}&9사과&0: 배고플 때, 먹을 수 있습니다! {nl}{nl}&9계란&0: 계란을 던져 위장 디코이를 생성해
+        &8워든&0을 교란시킬 수 있습니다.{nl}{nl}&9곤봉&0: 이걸로 &8워든&0을 기절시킬 수 있습니다.'
+      - '&9다른 팁&0: {nl}&9철 문 & 다락문&0: 우클릭 하여 열 수 있습니다 {nl}{nl}&9배터리&0: 맵 어딘가에 있는 보급
+        통에서 찾을 수 있습니다... {nl}{nl}&9탈출&0: 탈출은 승리하는 또다른 방법이지만, 더 많은 위험이 존재합니다'
+      - '{nl}{nl}&9발전기&0: 철 문 & 다락문을 닫고 여는데 사용되며, 충전이 필요합니다. 만약 발전기의 배터리가 &90%&0가
+        된다면, 문이 열립니다.'
+  game:
+    item-on-cooldown: '&7해당 아이템은 쿨타임이예요!'
+    # {item} will be replaced with the display name of the item
+    item-no-longer-on-cooldown: '{item}&7의 쿨타임이 끝났어요!'
+    security:
+      apple:
+        name: '&c사과'
+        lore:
+        - '&7사과를 먹으면 워든을 쫒아낼 수 있습니다!'
+      fake-sound:
+        name: '&3계란'
+        # {cooldown} will be replaced with the item's cooldown length
+        lore:
+        - '&7우클릭 하여 능력을 사용하세요.'
+        - '&7{cooldown}초의 쿨타임이 있어요.'
+      baton:
+        name: '&8곤봉'
+        # {cooldown} will be replaced with the item's cooldown length
+        lore:
+        - '&7&8워든&7을 기절시키는데 사용해요.'
+        - '&7{cooldown}초의 쿨타임이 있어요.'
+      battery:
+        name: '&f배터리'
+        lore:
+        - '&7발전기를 재충전하는데 사용해요.'
+    warden:
+      compass:
+        name: '&8길잡이'
+        lore:
+        - '&7우클릭하여 아이템을 사용하세요.'
+        - '&7&9경비원의 &7스폰을 표시해요.'
+        use: '&7나침반이 &9경비원의 &7스폰을 표시해요!'
+      sonic-attack:
+        name: '&7음파 공격'
+        # {cooldown} will be replaced with the item's cooldown length
+        lore:
+        - '&7우클릭 하여 능력을 사용하세요.'
+        - '&7{cooldown}초의 쿨타임이 있어요.'
+      stealth:
+        name: '&f은신 능력'
+        # {cooldown} will be replaced with the item's cooldown length
+        lore:
+        - '&7우클릭 하여 능력을 사용하세요.'
+        - '&7{cooldown}초의 쿨타임이 있어요.'
+      rage:
+        name: '&c분노 능력'
+        # {cooldown} will be replaced with the item's cooldown length
+        lore:
+        - '&7우클릭 하여 능력을 사용하세요.'
+        - '&7{cooldown}초의 쿨타임이 있어요.'
