@@ -1,0 +1,48 @@
+items:
+  # See full list on https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  "first": "BLUE_DYE"
+  "second": "RED_DYE"
+
+misc:
+  # Determines if in chat will appear a message
+  # that tells about someone won against someone in Tic Tac Toe
+  "broadcastWinEnabled": true
+
+  # Determines if in chat will appear a message
+  # that tells about two players had a draw in Tic Tac Toe
+  "broadcastDrawEnabled": true
+
+messages:
+  "prefix": "&#F0F8FF[틱택토] &r"
+  "info": "&#318CE7정보:\n
+  &#318CE7/ttt invite <Player>&#F0F8FF - 플레이어를 틱택토 게임에 초대합니다\n
+  &#318CE7/ttt accept&#F0F8FF - 요청을 수락합니다"
+  "broadcast-win-message": "&#318CE7%s이(가) %s(으)로부터 틱택토에서 승리했어요!"
+  "broadcast-draw-message": "&#318CE7%s와 %s이(가) 틱택토에서 비겼어요!"
+  "only-players": "&#CF1020플레이어만 명령어를 사용할 수 있어요."
+  "command-not-found": "&#CF1020명령어를 찾을 수 없습니다!"
+  "provide-a-name": "&#CF1020초대할 플레이어 이름을 적어주세요!"
+  "player-wasnt-found": "&#CF1020플레이어를 찾을 수 없습니다!"
+  "cant-send-to-yourself": "&#CF1020자신에게 요청을 보낼 수 없습니다!"
+  "receiver-does-not-have-enough-permissions": "&#CF1020해당 플레이어는 전송된 요청을 수락할 권한이 없습니다!"
+  "previous-request-was-deleted": "&#FECB00이전 요청이 삭제되었습니다!"
+  "request-sent-successfully": "&#318CE7요청이 &n성공적으로&r&#318CE7전송되었습니다!"
+  "received-a-request": "&#F0F8FF%s&#318CE7으로부터 틱택토 요청이 왔습니다!\n&n/ttt accept&r&#318CE7를 입력해 수락하세요!"
+  "request-to-play-wasnt-found": "&#CF1020요청을 찾을 수 없습니다!"
+  "request-was-accepted": "&#8EE53F요청이 수락되었습니다!"
+  "you-accepted-request": "&#8EE53F%s이(가) 보낸 요청을 수락했습니다."
+  "you-won": "&n%s&#8EE53F에게서 승리했습니다!"
+  "you-lost": "&n%s&#CF1020에게서 패배했습니다!"
+  "game-ended-draw": "&#FECB00게임이 무승부로 끝났습니다!"
+  "opponent-aborted-game": "&#318CE7상대가 게임을 포기했습니다! &#8EE53F&n당신이 승리했어요!"
+  "you-aborted-game": "&#CF1020게임을 포기했습니다! 패배했어요."
+
+  # Gui messages (that are shown in game inventory)
+  "gui-prefix": "[틱택토] "
+  "gui-player's-turn": "%s의 턴입니다!"
+  "gui-draw": "무승부!"
+  "gui-player-won": "%s 승리!"
+
+  # Admin messages
+  "plugin-reloaded": "&#318CE7Plugin was reloaded!"
+  "failed-to-reload": "&#CF1020Plugin was failed to reload."
