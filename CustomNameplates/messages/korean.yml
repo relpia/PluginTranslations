@@ -1,0 +1,29 @@
+config-version: '23'
+
+messages:
+  prefix: '<gradient:#2E8B57:#48D1CC>[CustomNameplates] </gradient>'
+  reload: <white>구성을 다시 불러왔어요! </white>
+  cooldown: <white>아직 미리보기가 중단되지 않았어요!</white>
+  generate: <white>리소스팩을 생성하고 있어요...</white>
+  generate-done: <white>리소스팩이 생성되었어요! 리소스팩을 다시 설치하는걸 잊지 마세요.</white>
+  no-nameplate: '명패 없음'
+  preview: '<white>명패를 미리보기를 표시할게요. (확인하려면 3인칭으로 전환하세요!)</white>'
+  
+  equip-nameplates: '<white>명패 {Nameplate}을(를) 착용했어요. </white><yellow><click:run_command:/nameplates preview>[클릭하여 미리보기]'
+  force-equip-nameplates: <white>명패 {Nameplate}을(를) {Player}에게 착용시켰어요.</white>
+  unequip-nameplates: '<white>명패를 제거했어요</white>'
+  force-unequip-nameplates: <white>{Player}의 명패를 제거했어요!</white>
+  not-exist-nameplates: '<white>해당 명패는 존재하지 않아요!</white>'
+  not-available-nameplates: <white>해당 명패는 현재 이용할 수 없어요!</white>
+  available-nameplates: '<white>이용 가능한 명패: {Nameplates}</white>'
+  have-no-nameplates: '<white>아직 명패가 없어요'
+  force-preview: <white>명패 미리보기를 표시할게요. (확인하려면 3인칭으로 전환하세요!)</white>
+  
+  equip-bubbles: <white>말풍선 {Bubble}을(를) 착용했어요.</white>
+  force-equip-bubbles: <white>말풍선 {Bubble}을(를) 착용했어요</white>
+  unequip-bubbles: <white>말풍선을 장착 해제했어요</white>
+  force-unequip-bubbles: <white>{Player}의 말풍선을 장착 해제했어요!</white>
+  not-exist-bubbles: <white>말풍선이 존재하지 않아요!</white>
+  not-available-bubbles: <white>해당 말풍선은 아직 이용할 수 없어요!</white>
+  available-bubbles: '<white>이용 가능한 말풍선: {Bubble}</white>'
+  have-no-bubbles: '<white>어떠한 말풍선도 가지고 있지 않아요'
